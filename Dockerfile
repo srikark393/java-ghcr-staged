@@ -7,5 +7,5 @@ RUN mvn -B -q test package verify
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-COPY --from=build /src/target/app-jar-with-dependencies.jar /app/app.jar
+COPY --from=build /src/target/*-jar-with-dependencies.jar /app/app.jar
 ENTRYPOINT ["java","-jar","/app/app.jar"]
