@@ -12,4 +12,4 @@ COPY src ./src
 RUN mvn -B -q test package && ls -al target
 
 # Run the jar directly from /app/target/app.jar
-ENTRYPOINT ["java","-jar","target/app.jar"
+ENTRYPOINT ["java","-jar","target/app.jar"]
